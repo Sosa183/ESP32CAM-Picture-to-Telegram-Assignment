@@ -65,14 +65,13 @@ The purpose of this project was to set up an ESP32-CAM that connects to a Telegr
 8. Fixed missing braces in the `loop()` function that caused compile errors.  
 9. Connected ESP32-CAM to FTDI, enabled programming mode, and uploaded code.  
 10. Tested commands in Telegram: `/start`, `/flash`, and `/photo`.  
-11. Added screenshots and organized documentation in this GitHub repository.
 
 ---
 
 ## Problems / Solutions
 
 ### **Bot not responding**
-**Cause:** Messaging BotFather instead of my bot, or bot wasn’t activated.  
+**Cause:** Messaging BotFather instead of my bot, or the bot wasn’t activated.  
 **Solution:** Opened the correct bot link from BotFather → pressed **Start** → resent commands.
 
 ### **`getUpdates` returned empty results**
@@ -82,10 +81,6 @@ The purpose of this project was to set up an ESP32-CAM that connects to a Telegr
 ### **Compilation error: `expected '}' at end of input`**
 **Cause:** Missing closing bracket in `loop()`.  
 **Solution:** Restored full, proper loop structure from the tutorial.
-
-### **HTTPS certificate errors**
-**Cause:** Missing Telegram root certificate.  
-**Solution:** Added certificate block and `clientTCP.setCACert(TELEGRAM_CERTIFICATE_ROOT);`.
 
 ---
 
